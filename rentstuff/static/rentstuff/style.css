@@ -1,0 +1,140 @@
+html, body {
+  background-color: #141110; 
+  font-family: Helvetica, Arial, Sans;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  color: white;
+  position: relative;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+}
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+  width : 150px;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+a.mais {
+  color: #9cf;
+  text-decoration: none;
+  text-align: right;
+  float:right;
+  vertical-align: baseline;
+}
+
+a {
+  color: #9cf;
+  text-decoration: none;
+}
+
+#header {
+  display: block;
+  height: 49px;
+  margin-left: 20px;
+}
+
+#footer {
+    border-top: 1px solid #fff;
+    font-size: 70%;
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+}
+
+#content {
+  border-top: 1px solid #fff;
+  margin-top: 20px;
+  padding: 25px;
+  color: c0c0c0;
+  font-size: 16px;
+}
+
+#contentcadastro {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 25px;
+  color: c0c0c0;
+  font-size: 16px;
+}
+
+#aligncenter {
+  text-align: center;
+}
+
+#aligndetail {
+  width: 70%;
+  margin: auto;
+}
+
+#anuncio {
+  background-color: #171616;
+  width: 170px;
+  height: 150px;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 10px;
+  border: 1px solid #9cf;
+  display: inline-flex;
+  text-align: center;
+}
+
+
+#titulo-produto {
+  color: #9cf;
+  font-size: 20px;
+  font-weight: bold;
+  height: 50px;
+}
+
+.user {
+  display: inline;
+  color: #9cf;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 2px 2px #000;
+  float: right;
+}
+
+.titulo {
+  color: #9cf;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+a.logo {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -4px;
+    text-shadow: 1px 2px 2px #000;
+    display: inline;
+    float:left;
+}
+
+.slogan {
+    color: #9cf;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -3px;
+    text-shadow: 1px 2px 2px #000;
+    display: inline;
+    vertical-align: bottom;
+    float: left;
+}
+

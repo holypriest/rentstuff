@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'rentstuff/style.css' %}" />
+
+<html>
+  <head>
+    <title>{{ anuncio.produto }}</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <a href="{% url 'index' %}" class="logo">Rentstuff. </a>
+      <div class="slogan">alugue num clique</div>
+      <div class="user">
+      {% if user.is_authenticated %}
+        <a href="/usuarios/{{user.username}}">{{user.first_name}}</a><br />
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+          <a href="{% url 'login' %}">Login</a><br />
+          <a href="{% url 'cadastro' %}">Cadastre-se</a>
+      {% endif %}
+      </div>
+    </div>
+
+
+    <div id="content">
+      <div id="aligndetail">
+      <div class="titulo">{{ anuncio.produto }}</div>
+      <p> Categoria: <a href="{% url 'categoria' anuncio.categoria %}">{{ anuncio.categoria }}</a></p>
+      por <a href="{% url 'usuario' anuncio.usuario %}">{{ anuncio.usuario }}</a>
+      <p>{{ anuncio.descricao }} </p>
+      <p>R$ {{ anuncio.diaria|floatformat:2}}/dia</p>
+      <form action="{% url 'aluguel' anuncio.id %}">
+        <input type="submit" value="Alugar">
+      </form>
+    </div>
+    </div>
+    </body>
+
+  <p id="footer">
+    Todos os direitos reservados.
+  </p>
+</html>

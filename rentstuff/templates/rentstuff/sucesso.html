@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'rentstuff/style.css' %}" />
+
+<html>
+  <head>
+    <title>Rentstuff.</title>
+  </head>
+
+  <body>
+
+	<div id="header">
+	  <a href="{% url 'index' %}" class="logo">Rentstuff. </a>
+	  <div class="slogan">alugue num clique</div>
+	  <div class="user">
+	  {% if user.is_authenticated %}
+	    <a href="/usuarios/{{user.username}}">{{user.first_name}}</a><br />
+	    <a href="{% url 'logout' %}">Logout</a>
+	    {% else %}
+	      <a href="{% url 'login' %}">Login</a><br />
+	      <a href="{% url 'cadastro' %}">Cadastre-se</a>
+	  {% endif %}
+	  </div>
+	</div>
+
+	<div id="content">
+	  	<div id="aligncenter">
+	  		<p>Seu aluguel foi realizado com sucesso!</p>
+		</div>
+		Cadastre um novo produto clicando <a href="{% url 'anuncio' %}">aqui</a>.
+	</div>
+
+	<p id="footer">
+	  Todos os direitos reservados.
+	</p>
+</body>
+</html>
